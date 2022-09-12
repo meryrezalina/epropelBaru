@@ -215,13 +215,13 @@
 
                         <div class="form-group">
                             <label for="romoApprover">Disetujui oleh Romo</label>
-                            <select name="romoApprover" class="form-control" id="romoApprover">
-                                <option value="">Pilih Romo</option>
-                                <option value="Rm. Gregorius Kriswanta, Pr.">Rm. Gregorius Kriswanta, Pr.</option>
-                                <option value="Rm. Andreas Krishna Gunawan, Pr.">Rm. Andreas Krishna Gunawan, Pr.</option>
-                                <option value="Rm. Robertus Yuni Tri Wibowo, Pr">Rm. Robertus Yuni Tri Wibowo, Pr</option>
-
-                            </select>
+                            <input type="text"
+                                class="form-control @error('romoApprover') {{ 'is-invalid' }} @enderror"
+                                name="romoApprover" placeholder="Masukkan Nama Romo"
+                                value="{{ old('romoApprover') ?? ($proposals->romoApprover ?? '') }}">
+                            @error('romoApprover')
+                                <span class="text-danger"> Nama Romo tidak boleh kosong </span>
+                            @enderror
                         </div>
 
                         <div class="form-group">
