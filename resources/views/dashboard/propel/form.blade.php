@@ -162,7 +162,7 @@
 
                                 @if (isset($propel))
                                     <rincian-component
-                                        :list-of-indikator="{{ json_encode($rincians) ?? json_encode(old('rincians') ?? []) }}"
+                                        :list-of-rincian="{{ json_encode($rincians) ?? json_encode(old('rincians') ?? []) }}"
                                         :jenis-data="{{ json_encode('edit') }}"></rincian-component>
                                 @else
                                     <rincian-component

@@ -152,7 +152,7 @@
                                     id="pencapaianLPJ"
                                     disabled
                                     name="pencapaianLPJ"
-                                    placeholder="Masukkan Pencapaian LPJ"
+                                    placeholder="Dapat diisi saat pembuatan LPJ"
                                     v-model="indikator.pencapaianLPJ"
                                 />
                             </div>
