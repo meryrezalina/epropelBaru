@@ -374,7 +374,7 @@
         }
 
         function numbersonly(ini, e) {
-            if (e.keyCode >= 49) {
+            if (e.keyCode >= 48) {
                 if (e.keyCode <= 57) {
                     a = ini.value.toString().replace(".", "");
                     b = a.replace(/[^\d]/g, "");
@@ -396,16 +396,18 @@
                 } else {
                     return false;
                 }
-            } else if (e.keyCode == 48) {
-                a = ini.value.replace(".", "") + String.fromCharCode(e.keyCode);
-                b = a.replace(/[^\d]/g, "");
-                if (parseFloat(b) != 0) {
-                    ini.value = tandaPemisahTitik(b);
-                    return false;
-                } else {
-                    return false;
-                }
-            } else if (e.keyCode == 95) {
+            }
+            // else if (e.keyCode == 48) {
+            //     a = ini.value.replace(".", "") + String.fromCharCode(e.keyCode);
+            //     b = a.replace(/[^\d]/g, "");
+            //     if (parseFloat(b) != 0) {
+            //         ini.value = tandaPemisahTitik(b);
+            //         return false;
+            //     } else {
+            //         return false;
+            //     }
+            // } 
+            else if (e.keyCode == 95) {
                 a = ini.value.replace(".", "") + String.fromCharCode(e.keyCode - 48);
                 b = a.replace(/[^\d]/g, "");
                 if (parseFloat(b) != 0) {
