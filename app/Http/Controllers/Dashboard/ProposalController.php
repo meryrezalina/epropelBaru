@@ -130,7 +130,8 @@ class ProposalController extends Controller
             $proposals->nomorRAPB = $request->input('nomorRAPB');
             $proposals->namaPJ = $request->input('namaPJ');
             $proposals->no_hp = $request->input('no_hp');
-            $proposals->totalBiaya = $request->input('totalBiaya');
+            $proposals->totalBiaya = preg_replace("/[.,]/", "", $request->totalBiaya);
+            // $proposals->totalBiaya = $request->input('totalBiaya');
             $proposals->sasaranStrategis = $request->input('sasaranStrategis');
             $proposals->romoApprover = $request->input('romoApprover');
             $proposals->kabidApprover = $request->input('kabidApprover');
